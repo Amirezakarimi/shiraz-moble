@@ -67,20 +67,7 @@ body {
   left: 500px;
 }
 
-.container-poshtiban {
-  margin-top: 100px;
-  margin-right: 15%;
 
-  >span {
-    font-weight: 800;
-    font-size: 40px;
-    color: #EFEFEF;
-  }
-
-  >p {
-    width: 60%;
-  }
-}
 
 @media (max-width: 768px) {
   .back-404-img {
