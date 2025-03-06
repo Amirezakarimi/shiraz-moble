@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden; /* جلوگیری از اسکرول افقی در کل صفحه */
+}
+
+.main-div-aboutMe{
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.titr-top {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1C211C;
+}
+
+.video-top-aboutMe {
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-top-aboutMe img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.div-gallery-img {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    max-width: 100%; /* محدود کردن عرض به اندازه والد */
+}
+
+.div-gallery-img img {
+    width: 300px;
+    height: auto;
+}
+
+.more-aboutMe {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.right-more-about {
+    flex: 2;
+
+    >p {
+        font-size: 15px;
+        font-weight: 400;
+    }
+
+    >h3 {
+        font-size: 20px;
+        font-weight: 800;
+    }
+}
+
+.left-more-about {
+    flex: 1;
+}
+
+.left-more-about img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.flex-getting-to-know-the-team {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px 0;
+}
+
+.flex-getting-to-know-the-team img {
+    flex: 0 0 calc(20% - 16px);
+    /* 20% برای 5 تصویر در هر ردیف، منهای فاصله بین آنها */
+    max-width: calc(20% - 16px);
+    height: auto;
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .main-div-aboutMe{
+        padding: 0 15px;
+        margin: 0 auto;
+    }
+    .more-aboutMe {
+        flex-direction: column;
+    }
+
+    .right-more-about,
+    .left-more-about {
+        flex: none;
+        /* width: 100%; */
+    }
+    .left-more-about{
+        text-align: center;
+    }
+
+    .flex-getting-to-know-the-team img {
+        flex: 0 0 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+    }
+
+    .div-gallery-img {
+        display: flex;
+        gap: 7px;
+        overflow-x: auto;
+        white-space: nowrap;
+        width: 100%;
+        padding: 0px 0;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .div-gallery-img::-webkit-scrollbar {
+        display: none;
+    }
+
+    .div-gallery-img img {
+        min-width: 124px;
+        width: 280px;
+        height: 80px;
+        margin-right: 1px;
+    }
+
+    .div-gallery-img img:last-child {
+        margin-right: 0;
+    }
+}
+

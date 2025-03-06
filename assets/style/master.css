@@ -1,17 +1,27 @@
+@font-face {
+    font-family: "Modam";
+    src: url("../font/ModamFaNum-Regular.ttf") format("truetype");
+}
+
+body {
+    direction: rtl;
+    font-family: Modam;
+}
+
 .container-poshtiban {
     margin-top: 100px;
     margin-right: 15%;
-  
+
     >span {
-      font-weight: 800;
-      font-size: 40px;
-      color: #EFEFEF;
+        font-weight: 800;
+        font-size: 40px;
+        color: #EFEFEF;
     }
-  
+
     >p {
-      width: 60%;
+        width: 60%;
     }
-  }
+}
 
 .video-end-page {
 
@@ -22,9 +32,11 @@
 
 .footer {
     height: 500px;
-    >div{
+
+    >div {
         text-align: center;
-        h6{
+
+        h6 {
             font-size: 14px;
             font-weight: 400;
         }
@@ -51,30 +63,59 @@
     }
 }
 
-.page-select-footer{
+.page-select-footer {
     text-align: center;
     margin: 50px;
-    >a{
+
+    >a {
         color: #808080;
         text-decoration: none;
         margin: 0px 20px;
         font-size: 14px;
         font-weight: 400;
+
+
+    }
+
+    >a:hover {
+        color: RGB(39 104 106);
+       
     }
 }
 
-.Symbols-footer{
+.Symbols-footer {
     text-align: center;
-    >img{
+
+    >img {
         margin: 0px 20px;
     }
 }
 
-.social-media-footer{
+.social-media-footer {
     text-align: center;
     margin-top: 50px;
 
-    >img{
+    >img {
         margin: 0px 10px;
     }
+}
+
+.call-about {
+    background-color: #090A09;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+
+    >div {
+        color: #EFEFEF;
+    }
+}
+
+.container-width {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
