@@ -1,0 +1,66 @@
+
+.video-end-page {
+
+    >img {
+        width: 100%;
+    }
+}
+
+.footer {
+    height: 500px;
+    >div{
+        text-align: center;
+        h6{
+            font-size: 14px;
+            font-weight: 400;
+        }
+    }
+}
+
+.top-footer-container {
+    margin-top: 50px;
+    text-align: center;
+
+    >p {
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+.call-info-footer {
+    text-align: center;
+
+    >span {
+        margin: 0px 4%;
+        font-weight: 600;
+        font-size: 15px;
+    }
+}
+
+.page-select-footer{
+    text-align: center;
+    margin: 50px;
+    >a{
+        color: #808080;
+        text-decoration: none;
+        margin: 0px 20px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.Symbols-footer{
+    text-align: center;
+    >img{
+        margin: 0px 20px;
+    }
+}
+
+.social-media-footer{
+    text-align: center;
+    margin-top: 50px;
+
+    >img{
+        margin: 0px 10px;
+    }
+}
