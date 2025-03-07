@@ -1,6 +1,13 @@
 @font-face {
     font-family: "Modam";
     src: url("../font/ModamFaNum-Regular.ttf") format("truetype");
+    font-weight: normal; /* برای فونت معمولی */
+}
+
+@font-face {
+    font-family: "Modam";
+    src: url("../font/ModamFaNum-Bold.ttf") format("truetype");
+    font-weight: bold; /* برای فونت بولد */
 }
 
 body {
@@ -24,7 +31,6 @@ body {
 }
 
 .video-end-page {
-
     >img {
         width: 100%;
     }

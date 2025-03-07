@@ -1,0 +1,152 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+.main-div-page {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.div-top-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #F6F6F0;
+}
+
+.div-top-head input[type="search"] {
+    font-family: modam;
+    padding: 10px 10px 10px 35px;
+    border-radius: 5px;
+    border: none;
+    width: 250px;
+    font-size: 12px;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 16px;
+}
+
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-button {
+    position: absolute;
+    left: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.search-button:hover svg path {
+    stroke: #27686A;
+}
+
+.div-top-head input[type="search"] {
+    padding-left: 40px;
+}
+
+.div-top-head input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 20px;
+    width: 20px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>") no-repeat 50% 50%;
+    background-size: contain;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.div-top-head input[type="search"]::-webkit-search-cancel-button:hover {
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2327686A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><line x1='18' y1='6' x2='6' y2='18'></line><line x1='6' y1='6' x2='18' y2='18'></line></svg>");
+}
+
+.bottom-top-head {
+    color: #1C211C;
+    margin: 30px 0px;
+
+    >p {
+        font-size: 14px;
+        font-weight: normal;
+    }
+
+    >span {
+        font-size: 15px;
+        font-weight: bold;
+
+    }
+}
+
+.accordion-container {
+    margin: 30px 0px;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #f9f9f9;
+}
+
+.accordion-header h3 {
+    margin: 0;
+    font-size: 14px;
+    color: #1C211C;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.accordion-item.active .accordion-content {
+    display: block;
+}
+
+.accordion-item.active .icon {
+    transform: rotate(180deg);
+}
+
+.icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-content p {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.accordion-content p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .div-top-head {
+        flex-direction: column;
+    }
+}
