@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+.main-div-page {
+    padding: 0 15px;
+    margin: 20px 0px;
+}
+
+.div-top-head {
+    padding: 20px;
+    background-color: #F6F6F0;
+
+    >h2 {
+        font-size: 20px;
+    }
+}
+
+.div-main-Section-contact {
+    display: flex;
+    gap: 3rem;
+    margin: 50px 0px;
+}
+
+.right-Section-contact {
+    >p {
+        font-weight: normal;
+        font-size: 14px;
+    }
+}
+
+.left-Section-contact {
+    >p {
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    >button {
+        padding: 15px 40px;
+        color: #FFFFFF;
+        background-color: #27686A;
+        border: none;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 13px;
+        display: block;
+        margin-right: auto;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.container-left-Section-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    >button {
+        padding: 15px 40px;
+        color: #FFFFFF;
+        background-color: #27686A;
+        border: none;
+        border-radius: 8px;
+        font-family: inherit;
+        font-size: 13px;
+        display: block;
+        margin-right: auto;
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #EFEFEF;
+    background: transparent;
+    outline: none;
+    font-family: inherit;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-group label {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #666;
+    pointer-events: none;
+    transition: 0.3s ease all;
+}
+
+.input-group input:focus~label,
+.input-group input:valid~label {
+    top: 0;
+    right: 10px;
+    font-size: 12px;
+    background: white;
+    padding: 0 5px;
+    color: #808080;
+}
+
+.input-group input:focus {
+    border-color: #808080;
+}
