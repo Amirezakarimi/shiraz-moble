@@ -125,3 +125,9 @@ body {
     margin-right: auto;
     width: 100%;
 }
+
+@media screen and (max-width: 768px) {
+    .call-about {
+        height: 450px;
+    }
+}

@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     const accordionHeaders = document.querySelectorAll('.accordion-header');
     const searchInput = document.querySelector('input[type="search"]');
