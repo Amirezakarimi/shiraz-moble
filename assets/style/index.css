@@ -76,5 +76,130 @@ body {
   padding-left: 100px;
 }
 
-.search-btn {
+.div-Why-us {
+  margin-top: 50px;
+}
+
+.div-best-site-home-page {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container-best-site-home-page {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  > img {
+    width: 45px;
+  }
+}
+
+.div-baaner-home {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.container-top-chosen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > button {
+    border: solid 1px #efefef;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: 15px;
+    padding: 13px 20px;
+    border-radius: 5px;
+  }
+}
+
+.products-home-page{
+    margin-top: 60px;
+    display: flex;
+    gap: 30px;
+}
+
+.div-Chosen-Advertisement {
+  margin-top: 80px;
+  height: 900px;
+}
+
+.right-content-top-chosen {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  > h3 {
+    margin: 0;
+  }
+
+  > span {
+    color: #666666;
+  }
+}
+
+.Chosen-Advertisement-Product {
+  width: 300px;
+}
+
+.Chosen-Advertisement-Product img:first-child {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.Chosen-Advertisement-Product img:nth-child(2) {
+  display: none;
+}
+
+.container-info-product {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  
+  > h4 {
+    margin: 0;
+    width: 60%;
+    color: #27686A;
+  }
+
+  > div {
+    display: flex;
+    gap: 5px;
+    color: #27686A;
+  }
+
+  > span:last-child {
+    margin-top: 8px;
+    color: #666666;
+    font-size: 14px;
+  }
+}
+
+.icon-prudocts{
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    
+}
+
+.main-div-icon-prudocts {
+    margin-top: 20px;
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 15px;
+
+    > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+        
+        > span {
+            font-size: 14px;
+            color: #666666;
+        }
+    }
 }
