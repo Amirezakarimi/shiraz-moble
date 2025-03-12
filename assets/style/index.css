@@ -128,13 +128,15 @@ body {
   justify-content: space-between;
   align-items: center;
 
-  > button {
+  > a {
     border: solid 1px #efefef;
     background-color: transparent;
     font-family: inherit;
     font-size: 15px;
     padding: 13px 20px;
     border-radius: 5px;
+    color: #666666;
+    text-decoration: none;
   }
 }
 
@@ -275,30 +277,101 @@ body {
   justify-content: space-between;
 }
 
-.container-location{
-    margin-top: 10%;
+.container-location {
+  margin-top: 10%;
 }
 
 .div-location-map {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 30px;
 }
 
 .div-location-map > div {
-    width: calc(25% - 15px);
+  width: calc(25% - 15px);
 }
 
 .img-location-map {
-    background-color: #F6F6F0;
-    width: 100%;
-    border-radius: 8px;
+  background-color: #f6f6f0;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.div-info-location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.div-info-location h4 {
+  margin: 0;
+}
+
+.div-info-location span {
+  color: #666666;
+  font-size: 14px;
+}
+
+.district-location {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 40px 0;
+  gap: 20px;
+}
+
+.location-column {
+  width: calc(16.666% - 17px);
+}
+
+.location-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.location-column li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 8px;
+  transition: border-bottom 0.2s;
+}
+
+.location-name {
+  color: #000000;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.location-count {
+  color: #666666;
+  font-size: 13px;
+}
+
+.location-column li:hover {
+  border-bottom: 2px solid #27686a;
+}
+
+.location-column li:hover .location-name {
+  color: #27686a;
+}
+
+@media screen and (max-width: 992px) {
+  .location-column {
+    width: calc(33.333% - 14px);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .banner-image {
-    height: 600px; /* ارتفاع بیشتر در موبایل */
+    height: 600px;
   }
 
   .banner-content {
@@ -333,5 +406,28 @@ body {
   .container-best-site-home-page {
     width: 48%;
     margin-top: 30px;
+  }
+
+  .location-column {
+    width: calc(50% - 10px);
+  }
+
+  .container-top-chosen > a {
+    display: none;
+  }
+
+  .div-location-map + a {
+    display: block !important;
+    text-align: center !important;
+    margin: 20px auto !important;
+    width: fit-content !important;
+    border: solid 1px #efefef !important;
+    background-color: transparent !important;
+    font-family: inherit !important;
+    font-size: 15px !important;
+    padding: 13px 20px !important;
+    border-radius: 5px !important;
+    color: #666666 !important;
+    text-decoration: none !important;
   }
 }
