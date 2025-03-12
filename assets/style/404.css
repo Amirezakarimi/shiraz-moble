@@ -29,7 +29,7 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
-  color: #1C211C;
+  color: #1c211c;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,23 +41,24 @@ body {
 }
 
 .btn-call {
-  color: #FFFFFF;
+  margin-top: 10px;
+  font-family: inherit;
+  color: #ffffff;
   border: none;
   border-radius: 5px;
-  background-color: #27686A;
+  background-color: #27686a;
   padding: 0.7rem 1.2rem;
 }
 
 .call-about {
-  background-color: #090A09;
+  background-color: #090a09;
   height: 400px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-
-  >div {
-    color: #EFEFEF;
+  > div {
+    color: #efefef;
   }
 }
 
@@ -66,8 +67,6 @@ body {
   padding: 0;
   left: 500px;
 }
-
-
 
 @media (max-width: 768px) {
   .back-404-img {
