@@ -1,133 +1,324 @@
 @font-face {
-    font-family: "Modam";
-    src: url("../font/ModamFaNum-Regular.ttf") format("truetype");
-    font-weight: normal; /* برای فونت معمولی */
+  font-family: "Modam";
+  src: url("../font/ModamFaNum-Regular.ttf") format("truetype");
+  font-weight: normal; /* برای فونت معمولی */
 }
 
 @font-face {
-    font-family: "Modam";
-    src: url("../font/ModamFaNum-Bold.ttf") format("truetype");
-    font-weight: bold; /* برای فونت بولد */
+  font-family: "Modam Bold";
+  src: url("../font/ModamFaNum-Bold.ttf") format("truetype");
+  font-weight: bold; /* برای فونت بولد */
 }
-
 body {
-    direction: rtl;
-    font-family: Modam;
+  direction: rtl;
+  font-family: "Modam";
+}
+.overlay,
+.modal__overlay {
+  position: fixed;
+  width: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+.overlay--active {
+  width: 100%;
+}
+.overlay.overlay--active {
+  z-index: 16;
+}
+/* Header */
+.header {
+  margin-top: 20px;
+}
+.header__wrapper {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+}
+.header__nav {
+  width: 30%;
+}
+.header__ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__li {
+  font-family: "Modam";
+  font-weight: 300;
+  font-size: 15px;
+}
+.header__li:hover {
+  color: #27686a;
+}
+.header__li--active,
+.mobile__li--active {
+  color: #27686a;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #27686a;
+}
+.header__img {
+  width: 101px;
+  height: 30px;
+}
+.header__img img {
+  width: 100%;
+  height: 100%;
+}
+.header__contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.header__contact span {
+  font-size: 16px;
+  font-family: "Modam";
+  font-weight: 500;
+}
+.header__contact button,
+.mobile__btn button {
+  background-color: #27686a;
+  width: 155px;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 15px;
+  font-weight: 300;
+  font-family: "Modam";
+}
+.header__hamburger {
+  display: none;
+  cursor: pointer;
+}
+.mobile__logo {
+  width: 100px;
+  height: 80px;
+}
+.mobile__logo img {
+  width: 100%;
+  height: 100%;
+}
+.header__mobile {
+  position: fixed;
+  top: 0;
+  right: -20rem;
+  display: none;
+  width: 250px;
+  transition: all 0.3s ease-in-out;
+  z-index: 30;
+  height: 100%;
+  background-color: #ffffff;
+}
+.mobile__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+.mobile__svg {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+.mobile__svg svg {
+  width: 100%;
+  height: 100%;
+}
+.mobile__nav {
+  padding: 10px;
+}
+.mobile__ul {
+  list-style: none;
+  padding-right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.mobile__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mobile__btn button {
+  margin-top: 20px;
+}
+.mobile__li {
+  width: 100%;
+}
+.mobile__li--active {
+  width: fit-content;
+}
+.mobile__heeader--active {
+  right: 0;
 }
 
+/* Header */
 .container-poshtiban {
-    margin-top: 100px;
-    margin-right: 15%;
+  margin-top: 100px;
+  margin-right: 15%;
 
-    >span {
-        font-weight: 800;
-        font-size: 40px;
-        color: #EFEFEF;
-    }
+  > span {
+    font-weight: 800;
+    font-size: 40px;
+    color: #efefef;
+  }
 
-    >p {
-        width: 60%;
-    }
+  > p {
+    width: 60%;
+  }
 }
 
 .video-end-page {
-    >img {
-        width: 100%;
-    }
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-end-page > img:last-child {
+  width: 100%;
 }
 
 .footer {
-    height: 500px;
+  height: 500px;
 
-    >div {
-        text-align: center;
+  > div {
+    text-align: center;
 
-        h6 {
-            font-size: 14px;
-            font-weight: 400;
-        }
+    h6 {
+      font-size: 14px;
+      font-weight: 400;
     }
+  }
 }
 
 .top-footer-container {
-    margin-top: 50px;
-    text-align: center;
+  margin-top: 50px;
+  text-align: center;
 
-    >p {
-        font-size: 20px;
-        font-weight: 700;
-    }
+  > p {
+    font-size: 20px;
+    font-weight: 700;
+  }
 }
 
 .call-info-footer {
-    text-align: center;
+  text-align: center;
 
-    >span {
-        margin: 0px 4%;
-        font-weight: 600;
-        font-size: 15px;
-    }
+  > span {
+    margin: 0px 4%;
+    font-weight: 600;
+    font-size: 15px;
+  }
 }
 
 .page-select-footer {
-    text-align: center;
-    margin: 50px;
+  text-align: center;
+  margin: 50px;
 
-    >a {
-        color: #808080;
-        text-decoration: none;
-        margin: 0px 20px;
-        font-size: 14px;
-        font-weight: 400;
+  > a {
+    color: #808080;
+    text-decoration: none;
+    margin: 0px 20px;
+    font-size: 14px;
+    font-weight: 400;
+  }
 
-
-    }
-
-    >a:hover {
-        color: RGB(39 104 106);
-       
-    }
+  > a:hover {
+    color: RGB(39 104 106);
+  }
 }
 
 .Symbols-footer {
-    text-align: center;
+  text-align: center;
 
-    >img {
-        margin: 0px 20px;
-    }
+  > img {
+    margin: 0px 20px;
+  }
 }
 
 .social-media-footer {
-    text-align: center;
-    margin-top: 50px;
+  text-align: center;
+  margin-top: 50px;
 
-    >img {
-        margin: 0px 10px;
-    }
+  > img {
+    margin: 0px 10px;
+  }
 }
 
 .call-about {
-    background-color: #090A09;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  background-color: #090a09;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-
-    >div {
-        color: #EFEFEF;
-    }
+  > div {
+    color: #efefef;
+  }
 }
 
 .container-width {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.paly-video-footer {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+  .header__nav {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .header__nav {
+    width: 40%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    .call-about {
-        height: 450px;
-    }
+  .call-about {
+    height: 450px;
+  }
+  .header {
+    padding: 0 15px;
+  }
+  .header__mobile {
+    display: block;
+  }
+  .header__hamburger {
+    display: block;
+  }
+  .header__contact button {
+    display: none;
+  }
+  .header__nav {
+    display: none;
+  }
 }

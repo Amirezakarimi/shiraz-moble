@@ -1,144 +1,200 @@
 body {
-    margin: 0;
-    padding: 0;
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
-    overflow-x: hidden; /* جلوگیری از اسکرول افقی در کل صفحه */
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
 }
 
-.main-div-aboutMe{
-    padding: 0 15px;
-    margin: 0 auto;
+.main-div-aboutMe {
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 .titr-top {
-    font-size: 20px;
-    font-weight: 800;
-    color: #1C211C;
+  font-size: 20px;
+  font-weight: 800;
+  color: #1c211c;
 }
 
 .video-top-aboutMe {
-    width: 100%;
-    overflow: hidden;
+  width: 100%;
+  overflow: hidden;
 }
 
 .video-top-aboutMe img {
-    width: 100%;
-    height: auto;
-    max-width: 100%;
-    display: block;
-    object-fit: cover;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .div-gallery-img {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
-    max-width: 100%; /* محدود کردن عرض به اندازه والد */
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  max-width: 100%; /* محدود کردن عرض به اندازه والد */
 }
 
 .div-gallery-img img {
-    width: 300px;
-    height: auto;
+  width: 300px;
+  height: auto;
 }
 
 .more-aboutMe {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    align-items: center;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  align-items: center;
+  margin-top: 40px;
 }
 
 .right-more-about {
-    flex: 2;
+  flex: 2;
+  > p {
+    font-size: 15px;
+    font-weight: 400;
+    color: #616161;
+  }
 
-    >p {
-        font-size: 15px;
-        font-weight: 400;
-    }
-
-    >h3 {
-        font-size: 20px;
-        font-weight: 800;
-    }
+  > h3 {
+    font-size: 20px;
+    font-family: "Modam Bold";
+  }
 }
 
 .left-more-about {
-    flex: 1;
+  flex: 1;
 }
 
 .left-more-about img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.getting-to-know-the-team {
+  > h3 {
+    font-family: "Modam Bold";
+  }
 }
 
 .flex-getting-to-know-the-team {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    margin: 40px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 40px 0;
+  position: relative;
 }
 
-.flex-getting-to-know-the-team img {
-    flex: 0 0 calc(20% - 16px);
-    /* 20% برای 5 تصویر در هر ردیف، منهای فاصله بین آنها */
-    max-width: calc(20% - 16px);
-    height: auto;
-    object-fit: cover;
+.img-container {
+  position: relative;
+  flex: 0 0 calc(20% - 16px);
+  max-width: calc(20% - 16px);
+}
+
+.img-team {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.img-container:hover .hover-info {
+  opacity: 1;
+}
+
+.hover-info {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.hover-info .name {
+  font-family: "Modam Bold";
+  background-color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #000000;
+}
+
+.hover-info .team-task {
+  background-color: #1c211c;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #FFFFFF;
 }
 
 @media (max-width: 768px) {
-    .main-div-aboutMe{
-        padding: 0 15px;
-        margin: 0 auto;
-    }
-    .more-aboutMe {
-        flex-direction: column;
-    }
+  .main-div-aboutMe {
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .more-aboutMe {
+    flex-direction: column;
+  }
 
-    .right-more-about,
-    .left-more-about {
-        flex: none;
-        /* width: 100%; */
-    }
-    .left-more-about{
-        text-align: center;
-    }
+  .right-more-about,
+  .left-more-about {
+    flex: none;
+    /* width: 100%; */
+  }
+  .left-more-about {
+    text-align: center;
+  }
 
-    .flex-getting-to-know-the-team img {
-        flex: 0 0 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-    }
+  .img-container {
+    flex: 0 0 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+  }
 
-    .div-gallery-img {
-        display: flex;
-        gap: 7px;
-        overflow-x: auto;
-        white-space: nowrap;
-        width: 100%;
-        padding: 0px 0;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        -ms-overflow-style: none;
-    }
+  .img-team {
+    width: 100%;
+    height: 100%;
+  }
 
-    .div-gallery-img::-webkit-scrollbar {
-        display: none;
-    }
+  .div-gallery-img {
+    display: flex;
+    gap: 7px;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    padding: 0px 0;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
 
-    .div-gallery-img img {
-        min-width: 124px;
-        width: 280px;
-        height: 80px;
-        margin-right: 1px;
-    }
+  .div-gallery-img::-webkit-scrollbar {
+    display: none;
+  }
 
-    .div-gallery-img img:last-child {
-        margin-right: 0;
-    }
+  .div-gallery-img img {
+    min-width: 124px;
+    width: 280px;
+    height: 80px;
+    margin-right: 1px;
+  }
+
+  .div-gallery-img img:last-child {
+    margin-right: 0;
+  }
 }
 
+/* اضافه کردن breakpoint برای تبلت */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .img-container {
+    flex: 0 0 calc(33.33% - 15px);
+    max-width: calc(33.33% - 15px);
+  }
+}

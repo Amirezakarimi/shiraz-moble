@@ -1,0 +1,1234 @@
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+  }
+.main{
+    margin-bottom: 50px;
+}
+.residence__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px 0;
+}
+.residence__content{
+   display: flex;
+   flex-direction: column;
+}
+.residence__content h4{
+   font-size: 20px;
+   font-family: "Modam Bold";
+   font-weight: 800;
+   margin: 0 0 10px 0;
+}
+.residence__content p{
+    font-size: 15px;
+    font-family: "Modam";
+    font-weight: 300;
+    color: #616161;
+    margin: 0;
+ }
+.residence__icon{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: 1px solid #EFEFEF;
+}
+.residence__details{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.share__button{
+    width: 95%;
+    margin: 0 auto;
+    display: none;
+}
+.share__button button{
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid #EFEFEF;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    height: 60px;
+    font-family: "Modam";
+    font-size: 14px;
+}
+.right__details{
+   width: 65%;
+   position: relative;
+   cursor: pointer;
+}
+.gallery__modal{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    right: 0;
+    opacity: 0;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+}
+.gallery__container{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+.gallery__header{
+    margin-bottom:10px ;
+}
+.gallery__modal-svg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+.svg__holder{
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.cancel-gallery{
+    cursor: pointer;
+}
+.gallery__modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.gallery__modal-header p{
+    margin: 0;
+}
+.galley__img {
+  display: none; /* همه تصاویر به صورت پیش‌فرض مخفی می‌شوند */
+  width: 100%; /* عرض تصویر را به 100% تنظیم می‌کنیم */
+  /* height: 100px; ارتفاع را به صورت خودکار تنظیم می‌کنیم تا نسبت ابعاد حفظ شود */
+  >img {
+    width: 100%;
+    height: 400px;
+  }
+}
+
+.galley__img.active {
+  display: block; /* فقط تصویر فعال نمایش داده می‌شود */
+}
+
+.gallery__body{
+    position: relative;
+}
+.next-btn , .prev-btn{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.next-btn{
+    left: -20px;
+    top: 40%;
+    background-color: white;
+}
+.prev-btn{
+    right: -15px;
+    top: 40%;
+    background-color: white;
+}
+
+.prev-btn:hover , .next-btn:hover{
+  background-color: #27686A;
+  color: white;
+}
+.svg{
+    width: 25px;
+    height: 25px;
+}
+.gallery__footer{
+    margin-top: 20px;
+}
+.gallery__fotter-images{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.gallery__footer-img{
+    width: 150px;
+    height: 100px;
+}
+.gallery__footer-img img{
+    width: 100%;
+    height: 100%;
+}
+.gallery__modal--active{
+    visibility: visible;
+    opacity: 1;
+}
+.visit__images{
+    position: absolute;
+    bottom: 20px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+    height: 50px;
+    right: 10px;
+    font-family: "Modam";
+    font-size: 15px;
+    font-weight: 300;
+}
+.right__details img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.left__details{
+   width: 30%;
+   padding: 10px;
+   border: 1px solid #EFEFEF;
+   border-radius: 5px;
+}
+.left__contents{
+   padding: 20px 0;
+   display: flex;
+   flex-direction: column;
+   gap: 16px;
+}
+.left__contents h5{
+    font-family: "Modam";
+    color: #616161;
+    margin: 0;
+}
+.content__price{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-start;
+}
+.content__price span{
+    font-family: "Modam Bold";
+    font-weight: 800;
+    font-size: 40px;
+    color: #27686A;
+}
+.content__price p , .content__title{
+    font-family: "Modam";
+    font-weight: 300;
+    font-size: 15px;
+    color: #616161;
+}
+.content__feature{
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    gap: 10px;
+}
+.left__content-feature{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.content__icon{
+    background-color: #EFEFEF;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+}
+#text__content{
+    color: #616161;
+    font-family:"Modam";
+    font-size: 15px;
+    font-weight: 300;
+    margin: 15px 0;
+}
+.content__btns{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.content__btns button{
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    border: 1px solid #EFEFEF;
+    background-color: transparent;
+    font-family: "Modam";
+    font-weight: 300;
+    font-size: 15px;
+    border-radius: 5px;
+}
+.reserve__btn{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 100px;
+    font-family: "Modam";
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+}
+.content__reservation{
+   display: flex;
+   margin-top: 20px;
+   gap: 5px;
+   flex-direction: column;
+   font-family: "Modam";
+}
+.reservation__box{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.reservation__box p{
+    font-size: 14px;
+    font-family: "Modam";
+    font-weight: 400;
+    margin: 0;
+    color: #808080;
+}
+.reservation__box span{
+    font-size: 14px;
+    color: #616161;
+    font-family: "Modam";
+    font-weight: 500;
+}
+.apartment__features{
+   margin: 50px 0;
+   width: 80%;
+}
+.apartment__text{
+    font-size: 15px ;
+    font-family: "Modam Bold";
+    font-weight: 700;
+}
+.apartment__holder{
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+}
+.apartment__box{
+    display: flex;
+    width: 45%;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+} 
+.apartment__box p{
+    font-family: "Modam Bold";
+}
+.apartment__box span{
+    font-family: "Modam";
+    color: #616161;
+    font-size: 14px;
+}
+.apartment__img{
+      width: 24px;
+      height: 24px;
+}
+.apartment__img img{
+    width: 100%;
+    height: 100%;
+}
+.apartment__content{
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+.apartment__content p{
+    margin: 0;
+}
+.apartment__desc{
+    border-top: 1px solid #EFEFEF;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 60%;
+}
+.apartment__desc p{
+    font-family: "Modam";
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 170%;
+    color: #616161;
+}
+.apartment__desc h5 , .features__apartment h5{
+    font-family: "Modam Bold";
+    font-weight:700 ;
+    font-size: 15px;
+    color: #616161;
+}
+.features__apartment{
+    border-top: 1px solid #EFEFEF;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    width: 60%;
+}
+.features__icon-holder{
+   display: flex;
+   align-items: flex-start;
+   justify-content: flex-start;
+   gap: 5px;
+}
+.icon__container{
+   display: flex;
+   gap: 15px;
+   width: 100%;
+   flex-direction: column;
+}
+.features__apartment-content{
+   display: flex;
+   width: 70%;
+   align-items: center;
+   gap: 10px;
+   justify-content: flex-start;
+}
+.features__apartment-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    background-color: #EFEFEF;
+    width: 242px;
+    height: 56px;
+    margin-top: 30px;
+}
+.features__apartment-btn span{
+   font-size: 15px;
+   font-weight: 300;
+   font-family: "Modam";
+   color: #808080;
+}
+.features__apartment-btn p{
+    font-size: 15px;
+    font-weight: 500;
+    font-family: "Modam";
+ }  
+.features__apartment-content p{
+    margin: 0;
+    color:#808080;
+    font-size: 14px;
+    font-family: "Modam";
+    font-weight: 400;
+}
+.apartment__location{
+    border-top: 1px solid #EFEFEF;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 60%;
+}
+.apartment__location h5{
+    font-family: "Modam Bold";
+    font-weight:700 ;
+    font-size: 15px;
+    color: #616161;
+    margin: 0;
+}
+.apartment__location span{
+    color: #616161;
+    font-size: 13px;
+    font-family: "Modam";
+}
+.distance{
+    border-top: 1px solid #EFEFEF;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    width: 60%;
+}
+.distance h5{
+   font-family: "Modam Bold";
+   font-weight:700 ;
+   font-size: 15px;
+   color: #616161;
+   margin-bottom: 10px;
+}
+.distance__p{
+    margin: 0;
+    color: #616161;
+    font-size: 13px;
+    font-weight: 300;
+    font-family: "Modam";
+}
+.distance__holder{
+   margin-top: 30px;
+   display: flex;
+   flex-direction: column;
+   gap: 35px;
+}
+.distance__top,.distance__bottom{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.distance__bottom-text{
+    font-family: "Modam Bold";
+    font-size: 14px;
+    font-weight: 800;
+    color: black;
+}
+.distance__top-holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.distance__text,.distance__time{ 
+   font-family: "Modam";
+   font-size: 13px;
+   font-weight: 400;
+}
+.distance__text{
+    color: #616161;
+}
+.distance__top-holder::before{
+   content: "";
+   border: 1px dashed #EFEFEF;
+   position: absolute;
+   top: 50%;
+   right: 30%;
+   width: 50%;
+}
+.distance__time{
+    color: #1C211C;
+} 
+.rules{
+    border-top: 1px solid #EFEFEF;
+    padding-top: 45px;
+    padding-bottom: 20px;
+    width: 65%;
+}
+.rules h5{
+    margin: 0;
+    font-family: "Modam Bold";
+    font-weight:700 ;
+    font-size: 15px;
+    color: #616161;
+}
+.rules__box-holder{
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+.rules__box{
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 20px;
+   padding: 0 15px 0 15px ;
+   width: 250px;
+   height: 85px;
+   border: 1px solid #EFEFEF;
+}
+.rules__detail{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.rules__reserve{
+    margin: 0;
+    color: #616161;
+    font-size: 13px;
+    font-family: "Modam";
+    font-weight: 400;
+}
+.rules__duration{
+  margin: 0;
+  color: #1C211C;
+  font-size: 15px;
+  font-family: "Modam Bold";
+  font-weight: 700;
+}
+.apartment__rules{
+    margin-top: 40px;
+}
+.all__rules-section{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 50px;
+}
+.apartment__rules-section{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50%;
+    margin-top: 25px;
+}
+.img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.apartment__rules-box{
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.apartment__rules-content{
+   display: flex;
+   gap: 10px;
+   align-items: center;
+   justify-content: flex-start;
+} 
+.host__rules{
+    width: 100%;
+    margin-top: 40px;
+}
+.host__holder{
+    margin-top: 20px;
+    background-color: #F6F6F0;
+    padding: 5px 10px;
+    border-radius: 5px;
+} 
+.host__box{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+}
+.host__text{
+   width: 75%;
+}
+.cancel__rules{
+    margin-top: 40px;   
+}
+.cancel__titles{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.cancel__titles span{
+    color: #FF0022;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Modam";
+}
+.cancel__rules-holder{
+   margin-top: 20px;
+}
+.cancel__box , .cancel__box2 , .cancel__box3{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 15px;
+  padding: 10px;
+  height: 90px;
+}
+.cancel__box{
+    background-color: #f7f9f9;
+}
+.cancel__box2{
+    background-color:#fffcf6 ;
+}
+.cancel__box3{
+    background-color: #fff5f6;
+}
+.cancel__text{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.cancel__p , .cancel__p2, .cancel__p3{
+    margin: 0;
+    font-family: "Modam Bold";
+}
+.cancel__p{
+    color: #27686A;
+}
+.cancel__p2{
+    color: #FFBA25;
+}
+.cancel__p3{
+    color: #FF0022;
+}
+.cancel__span , .cancel__span2 , .cancel__span3{
+   color: #808080;
+   font-family: "Modam";
+   font-weight: 400;
+   font-size: 14px;
+} 
+.customer__comment{
+    width: 65%;
+    padding-top: 30px;
+    border-top: 1px solid #EFEFEF;
+}
+.customer__header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.customer__header h5{
+    margin: 0;
+    font-family: "Modam Bold";
+    font-size: 15px;
+}
+.customer__header span{
+    color: #616161;
+    font-weight: 300;
+    font-size: 13px;
+}
+.comments__text{
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+}
+.comment__send{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 25%;
+    border: 1px solid #EFEFEF;
+    padding: 4px 8px;
+}
+.comment__send p{
+    font-family: "Modam Bold";
+}
+.customer__body{
+    margin-top: 30px;
+}
+.customer__details{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+.customer__right{
+   width: 30%;
+   display: flex;
+   gap: 7px;
+   flex-direction: column;
+}
+.customer__rate{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
+}
+.customer__star{
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 4px;
+} 
+.customer__progress{
+     background-color: #EFEFEF;
+     width: 100%;
+     height: 4px;
+     margin: 0;
+     border-radius: 30px;
+}
+.progress{
+     width: 40%;
+     height: 4px;
+     background-color: #27686A;
+}
+.customer__comment-count{
+      width: 60px;
+      font-family: "Modam";
+      color: #808080;
+      font-size: 13px;
+} 
+.customer__comment-count p{
+    margin: 0;
+}
+.customer__left{
+     width: 70%;
+}
+.customer__feature-comment{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.customer__item{
+    border-right: 1px solid #EFEFEF;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    gap: 7px;
+}
+.customer__item:nth-child(1){
+    border: none;
+}
+.customer__item-img{
+    width: 25px;
+    height: 25px;
+}
+.customer__item-img img{
+    width: 100%;
+    height: 100%;
+}
+.text__item{
+   margin: 0;
+   font-family: "Modam";
+   color: #808080;
+}
+.span__item{
+   font-family: "Modam Bold";
+}
+.all__comments{
+    margin-top: 40px;
+}
+.all__comments-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.all__comment-box{
+  display: flex;
+  border: 1px solid #EFEFEF;
+  padding: 15px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.comment__right-content{
+    background-color: #EFEFEF;
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
+    justify-content: center;
+}
+.content__img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.comment__left-content{
+   width: 90%;
+}
+.comment__titles{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+.comment__name{
+   display: flex;
+   gap: 5px;
+   flex-direction: column;
+}
+.comment__name p{
+    margin: 0;
+}
+.rating__holder{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 15px;
+}
+.rating__star-holder{
+    display: flex;
+   align-items: center;
+   justify-content: flex-end;
+   gap: 5px;
+}
+.comments__body{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.comment__body-text{
+   font-family: "Modam Bold";
+   margin: 0;
+}
+.comment__body-p{
+   font-family: "Modam";
+   margin: 0;
+   color: #808080;
+}
+.all__comment-btn{
+  display: flex;
+}
+.all__comment-send{
+   display: none;
+}
+.all__comment-btn , .all__comment-send{
+    width: 100%;
+    margin-top: 50px;
+    align-items: center;
+    justify-content: center;
+}
+.all__comment-btn button , .all__comment-send button{
+    background-color: transparent;
+    border: 1px solid #EFEFEF;
+    width: 162px;
+    height: 55px;
+    font-family: "Modam";
+}
+.contactus{
+    margin: 50px 0;
+    height: 85px;
+    width: 100%;
+    padding: 10px;
+    background-color: #F7F9F9;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.contactus__container,.contactus__holder{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.contactus__holder p{
+    font-family: "Modam Bold";
+}
+.contactus__box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 190px;
+    height: 55px;
+    color: #FFFFFF;
+    background-color: black;
+}
+.contactus__span{
+    font-family: "Modam";
+}
+.all__comments-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+.comment__modal{
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease-in-out;
+    right: 0;
+    opacity: 0;
+    z-index: 20;
+    height: 100%;
+    width: 100%;
+}
+.comment__modal--active{
+    visibility: visible;
+    opacity: 1;
+}
+.comment__container{
+    background-color: #FFFFFF;
+    border-radius: 5px;
+    width: 60%;
+    height: auto;
+    padding: 20px;
+    margin: 0 auto;
+}
+.comment__header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.modal__comment-body{
+   margin: 10px 0;
+} 
+.modal__body-holder{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.modal__body-items{
+    display: flex;
+    align-items: center;
+    border: 1px solid #EFEFEF;
+    justify-content: space-between;
+    padding: 10px;
+}
+.modal__comment-items{
+    border-right: 1px solid #EFEFEF;
+    display: flex;
+    padding: 0 25px;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+.modal__comment-items:nth-child(1){
+    border: none;
+}
+.modal__item-img{
+    width: 30px;
+    height:30px;
+}
+.modal__item-img img{
+    width: 100%;
+    height: 100%;
+}
+.modal__comment-text{
+   font-family: "Modam";
+   margin: 0;
+}
+.modal__comment-star{
+   display: flex;
+   gap: 3px;
+   align-items: flex-start;
+   justify-content: space-between;
+}
+.modal__comment-rate{
+    width: 13px;
+    height: 13px;
+}
+.modal__comment-rate img{
+    width: 100%;
+    height: 100%;
+}
+.modal__body-text1 , .modal__body-text2{
+   width: 99%;
+   height: 50px;
+}
+.modal__body-text2{
+    height: 150px;
+}
+.modal__body-text1 textarea::placeholder , .modal__body-text2 textarea::placeholder{
+    font-family: "Modam Bold";
+    padding: 15px 10px;
+}
+.modal__body-text1 textarea , .modal__body-text2 textarea{
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: 1px solid #EFEFEF;
+    outline: none;
+    padding: 5px;
+}
+.modal__comment-footer{
+   margin-top: 10px;
+}
+.modal__comment-btns{
+   display: flex;
+   align-items: center;
+   justify-content: flex-end;
+}
+.cancel__comment{
+    background-color: transparent;
+    font-family: "Modam";
+    border: none;
+    width: 153px;
+    height: 55px;
+    cursor: pointer;
+}
+#send-comment{
+  cursor: pointer;
+  background-color: #27686A;
+  color: #FFFFFF;
+  width: 153px;
+  height: 55px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Modam";
+}
+
+@media (max-width:992px) {
+   .gallery__container{
+    width: 80%;
+   }
+   .gallery__fotter-images{
+    gap: 10px;
+   }
+}
+
+@media (max-width:768px){
+    .residence__details{
+        flex-direction: column;
+    }
+    .right__details{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .left__details{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .reserve__btn{
+        justify-content: space-between;
+    }
+    .apartment__features{
+        width: 100%;
+        margin: 30px;
+    }
+    .apartment__holder{
+        width: 100%;
+        flex-direction: column;
+    }
+    .apartment__box{
+        width: 100%;
+    }
+    .reserve__btn{
+        padding: 5px;
+    }
+    .residence__icon{
+        display: none;
+    }
+    .share__button{
+        display: block;
+    }
+    .apartment__desc{
+        width: 100%;
+    }
+    .features__apartment{
+        width: 100%;
+    }
+    .apartment__location{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .distance{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .rules{
+        margin: 0 auto;
+        width: 95%;
+    }
+    .rules__box-holder{
+        flex-direction: column;
+    }
+    .rules__box{
+        width: 95%;
+    }
+    .all__rules-section{
+        flex-direction: column;
+        gap: 0;
+    }
+    .apartment__rules-section{
+        width: 100%;
+    }
+    .host__text{
+        width: 100%;
+    }
+    .customer__comment{
+        width: 95%;
+        margin: 0 auto;
+    }
+    .customer__details{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .comment__send{
+        width: 45%;
+        position: relative;
+        cursor: pointer;
+    }
+    .customer__right{
+        width: 100%;
+    }
+    .customer__left{
+        width: 100%;
+    }
+    .all__comment-send{
+       display: flex;
+    }
+    .all__comment-btn , .all__comment-send{
+        width: 50%;
+    }
+    .all__comment-btn button, .all__comment-send button{
+        width: 100%;
+    }
+    .comment__modal{
+        position: absolute;
+        top: 200px;
+    }
+    .comment__container{
+        height: auto;
+        width: 75%;
+    }
+    .modal__body-items{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .modal__comment-items{
+        width: 100%;
+    }
+    .modal__comment-star{
+        justify-content: flex-end;
+    }
+    .gallery__modal{
+        position: absolute;
+        top: 60px;
+    }
+    .gallery__container{
+        width: 80%;
+    }
+    .gallery__footer{
+        overflow-x: scroll;
+    }
+    .next-btn,.prev-btn{
+        display: none;
+    }
+    .gallery__fotter-images{
+        width: 600px;
+        gap: 10px;
+        height: 100px;
+    }
+    .gallery__footer-img{
+        height: 80px;
+    }
+}
+@media (max-width : 576px){
+     .icon__container{
+        width: 100%;
+     }
+     .icon__container:nth-child(3){
+        display: none;
+     }
+     .features__apartment-btn{
+        width: 95%;
+        margin: 20px auto;
+     }
+     .customer__feature-comment{
+        flex-direction: column;
+        gap: 10px;
+     }
+     .customer__item{
+        width: 100%;
+     }
+     .all__comment-box{
+        gap: 15px;
+     }
+     .svg__holder{
+        display: flex;
+     }
+}

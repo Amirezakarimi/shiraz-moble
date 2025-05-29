@@ -7,11 +7,60 @@
     <title>تماس با ما</title>
     <link rel="stylesheet" href="assets/style/Contact.css">
     <link rel="stylesheet" href="assets/style/master.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 
 <body>
-
     <div class="main-div-page">
+        <!-- Header -->
+        <header class="header">
+            <div class="header__wrapper">
+                <div class="header__logo">
+                    <div class="header__hamburger">
+                        <img src="assets/img/menu.svg" alt="">
+                    </div>
+                    <div class="header__img"><img src="assets/img/Group 590.png" alt=""></div>
+                </div>
+                <nav class="header__nav">
+                    <ul class="header__ul">
+                        <li class="header__li">همه اگهی ها</li>
+                        <li class="header__li header__li--active">جستجوی آپارتمان</li>
+                        <li class="header__li">وبلاگ</li>
+                        <li class="header__li">درباره ما</li>
+                    </ul>
+                </nav>
+                <div class="header__contact">
+                    <span>۰۲۱۰۴۱<span style="color: #27686a;">۳۵۲۰</span></span>
+                    <button>تماس با ما</button>
+                </div>
+                <div class="header__mobile">
+                    <div class="mobile__content">
+                        <div class="mobile__logo">
+                            <img src="assets/img/logo.svg" alt="">
+                        </div>
+                        <div class="mobile__svg">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="currentColor" class="size-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                    </div>
+                    <nav class="mobile__nav">
+                        <ul class="mobile__ul">
+                            <li class="mobile__li">همه اگهی ها</li>
+                            <li class="mobile__li mobile__li--active">جستجوی آپارتمان</li>
+                            <li class="mobile__li">وبلاگ</li>
+                            <li class="mobile__li">درباره ما</li>
+                        </ul>
+                        <div class="mobile__btn">
+                            <button>تماس با ما </button>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Header -->
         <div class="div-top-head">
             <h2>تماس با ما</h2>
         </div>
@@ -76,11 +125,7 @@
         </div>
 
         <div class="map-contact">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2452.559025918065!2d52.53306957918581!3d29.61989637172057!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1z2LTbjNix2KfYstiMINiu24zYp9io2KfZhiDYrtuM2KfZhdiMINmF2YbZiNqG2YfYsduM!5e0!3m2!1sen!2sde!4v1741445000033!5m2!1sen!2sde"
-                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+            <div id="map" style="width: 100%; height: 450px; border: 0;"></div>
         </div>
 
         <div class="call-about">
@@ -96,6 +141,7 @@
         </div>
 
         <div class="video-end-page">
+            <img class="paly-video-footer" src="assets/img/پخش ویدیو.png" alt="">
             <img src="assets/img/video-end-page.svg" alt="">
         </div>
 
@@ -137,7 +183,30 @@
             </div>
         </div>
 
+        <script>
+            // ایجاد نقشه Leaflet
+            var map = L.map('map').setView([29.619896, 52.533069], 18);
+        
+            // لایه نقشه از OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+        
+            // آیکون سفارشی
+            var customIcon = L.icon({
+                iconUrl: 'assets/img/logo-map.svg', // مسیر آیکون لوکال
+                iconSize: [60, 60],
+                iconAnchor: [20, 40],
+                popupAnchor: [0, -35]
+            });
+        
+            // اضافه کردن مارکر روی مختصات مشخص‌شده
+            L.marker([29.619896, 52.533069], { icon: customIcon }).addTo(map)
+                .bindPopup("مکان شیراز مبله");
+        </script>
+
         <script src="assets/js/Rules.js"></script>
+        <script src="assets/js/header.js"></script>
 </body>
 
 </html>

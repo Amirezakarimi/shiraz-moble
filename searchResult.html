@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/master.css">
+    <link rel="stylesheet" href="assets/style/searchResult.css">
+    <title>نتایج جستجو</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="header">
+      <div class="header__wrapper">
+       <div class="header__logo">
+        <div class="header__hamburger">
+          <img src="assets/img/menu.svg" alt="">
+       </div>
+       <div class="header__img"><img src="assets/img/Group 590.png" alt=""></div>
+       </div>
+       <nav class="header__nav">
+        <ul class="header__ul">
+          <li class="header__li">همه اگهی ها</li>
+          <li class="header__li header__li--active">جستجوی آپارتمان</li>
+          <li class="header__li">وبلاگ</li>
+          <li class="header__li">درباره ما</li>
+        </ul>
+       </nav>
+       <div class="header__contact">
+          <span>۰۲۱۰۴۱۳۵۲۰</span>
+          <button>تماس با ما</button>
+       </div>
+       <div class="header__mobile">
+         <div class="mobile__content">
+          <div class="mobile__logo">
+             <img src="assets/img/logo.svg" alt="">
+          </div>
+          <div class="mobile__svg">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+            </svg>            
+          </div>
+         </div>
+         <nav class="mobile__nav">
+          <ul class="mobile__ul">
+            <li class="mobile__li">همه اگهی ها</li>
+            <li class="mobile__li mobile__li--active">جستجوی آپارتمان</li>
+            <li class="mobile__li">وبلاگ</li>
+            <li class="mobile__li">درباره ما</li>
+          </ul>
+          <div class="mobile__btn">
+            <button>تماس با ما </button>
+          </div>
+         </nav>
+       </div>
+      </div>
+    </header>
+    <!-- Header -->
+
+    <!-- Main section -->
+    <main>
+     <!-- Top Section -->
+     <section class="professional_search">
+      <div class="professional__search-items">
+        <div class="professional__header">
+          <h4>جستجوی پیشرفته</h4>
+          <p>ما بهترین اقامت ممکن در شیراز را بدون هیچ‌گونه نگرانی، کاملاً مستقیم و بدون واسطه  برای شما به ارمغان می‌آوریم.</p>
+        </div>
+        <!-- Search items -->
+        <div class="search__items">
+          <div id="date" class="search__items-box">
+              <span>تاریخ اقامت</span>
+              <div class="search__icon">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" ><path d="M0 0h48v48H0z" fill="none"/><g id="Shopicon"><polygon points="24,29.172 9.414,14.586 6.586,17.414 24,34.828 41.414,17.414 38.586,14.586 	"/></g></svg>
+              </div>
+          </div>
+          <!-- Date Modal -->
+          <div class="date__modal">
+           <div class="date__modal-container">
+            <div class="date__header">
+              <p>تاریخ اقامت</p>
+              <div id="cancel-date"><img src="assets/img/بستن.svg" alt=""></div>
+            </div>
+            <div class="date__body">
+              <div class="date__body-top">
+                <div class="date__time-holder">
+                  <div class="date__enter">
+                    <p>تاریخ ورود</p>
+                    <span>1402/02/13</span>
+                  </div>
+                  <div class="date__exit">
+                    <p>تاریخ خروج</p>
+                    <span>1402/02/23</span>
+                  </div>
+                  <div class="date__time">
+                    <p>مدت اقامت</p>
+                    <span>20 روز</span>
+                  </div>
+                </div>
+                <div class="date__items">
+                  <div class="date__item-btn">
+                    <div class="date__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                      </svg>                                            
+                    </div>
+                    <p>اردیبهشت 1402</p>
+                  </div>
+                  <div class="date__item-btn">
+                    <p>خرداد 1402</p>
+                    <div class="date__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                      </svg>                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="days__container">
+                <div class="date__body-right">
+                  <div class="days">
+                   <div class="day">ش</div>
+                   <div class="day">ی</div>
+                   <div class="day">د</div>
+                   <div class="day">س</div>
+                   <div class="day">چ</div>
+                   <div class="day">پ</div>
+                   <div class="day">ج</div>
+                  </div>
+                  <div class="day__numbers">
+                    <div class="number__top"><span>1</span></div>
+                    <div class="number__middle">
+                      <div class="middle__box">
+                        <span class="day__number">2</span>
+                        <span class="day__number">3</span>
+                        <span class="day__number">4</span>
+                        <span class="day__number">5</span>
+                        <span class="day__number">6</span>
+                        <span class="day__number">7</span>
+                        <span class="day__number">8</span>
+                      </div>
+                      <div class="middle__box">
+                        <span class="day__number reserved">9</span>
+                        <span class="day__number reserved">10</span>
+                        <span class="day__number reserved">11</span>
+                        <span class="day__number reserved">12</span>
+                        <span class="day__number selected rounded__right">13</span>
+                        <span class="day__number selected">14</span>
+                        <span class="day__number selected">15</span>
+                      </div>
+                      <div class="middle__box">
+                        <span class="day__number selected">16</span>
+                        <span class="day__number selected">17</span>
+                        <span class="day__number selected">18</span>
+                        <span class="day__number selected">19</span>
+                        <span class="day__number selected">20</span>
+                        <span class="day__number selected">21</span>
+                        <span class="day__number selected">22</span>
+                      </div>
+                      <div class="middle__box">
+                        <span class="day__number selected rounded__left">23</span>
+                        <span class="day__number">24</span>
+                        <span class="day__number">25</span>
+                        <span class="day__number">26</span>
+                        <span class="day__number">27</span>
+                        <span class="day__number">28</span>
+                        <span class="day__number">29</span>
+                      </div>
+                    </div>
+                    <div class="number__bottom">
+                      <span class="day__number">30</span>
+                      <span class="day__number vacation">31</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="date__body-left">
+                  <div class="days">
+                    <div class="day" >ش</div>
+                    <div class="day" >ی</div>
+                    <div class="day" >د</div>
+                    <div class="day" >س</div>
+                    <div class="day" >چ</div>
+                    <div class="day" >پ</div>
+                    <div class="day" >ج</div>
+                  </div>
+                  <div class="day__numbers">
+                    <div class="number__top"><span>1</span></div>
+                    <div class="number__middle">
+                      <div class="middle__box">
+                        <span class="day__number">2</span>
+                        <span class="day__number">3</span>
+                        <span class="day__number">4</span>
+                        <span class="day__number">5</span>
+                        <span class="day__number">6</span>
+                        <span class="day__number">7</span>
+                        <span class="day__number">8</span>
+                      </div>
+                      <div class="middle__box">
+                        <span class="day__number">9</span>
+                        <span class="day__number">10</span>
+                        <span class="day__number">11</span>
+                        <span class="day__number">12</span>
+                        <span class="day__number">13</span>
+                        <span class="day__number">14</span>
+                        <span class="day__number">15</span>
+                      </div>
+                      <div class="middle__box">
+                        <span class="day__number">16</span>
+                        <span class="day__number">17</span>
+                        <span class="day__number">18</span>
+                        <span class="day__number">19</span>
+                        <span class="day__number">20</span>
+                        <span class="day__number">21</span>
+                        <span class="day__number">22</span>
+                      </div>
+                      <div class="middle__box">
+                        <span class="day__number">23</span>
+                        <span class="day__number">24</span>
+                        <span class="day__number">25</span>
+                        <span class="day__number">26</span>
+                        <span class="day__number">27</span>
+                        <span class="day__number">28</span>
+                        <span class="day__number">29</span>
+                      </div>
+                    </div>
+                    <div class="number__bottom">
+                      <span class="day__number">30</span>
+                      <span class="day__number">31</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="date__footer">
+               <div class="date__footer-container">
+                  <div class="date__footer-box">
+                    <div class="red"></div>
+                    <span>تعطیل رسمی</span>
+                  </div>
+                  <div class="date__footer-box">
+                    <div class="yellow"></div>
+                    <span>بازه انتخاب شده</span>
+                  </div>
+                  <div class="date__footer-box">
+                    <div class="grey"></div>
+                    <span>رزرو شده</span>
+                  </div>
+               </div>
+               <div class="date__footer-btns">
+                 <button class="date__cancel">انصراف</button>
+                 <button class="date__validate">تایید تاریخ</button>
+               </div>
+            </div>
+           </div>
+          </div>
+          <!-- Date Modal -->
+          <div id="features" class="search__items-box">
+            <span>امکانات اقامتگاه</span>
+            <div class="search__icon">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" ><path d="M0 0h48v48H0z" fill="none"/><g id="Shopicon"><polygon points="24,29.172 9.414,14.586 6.586,17.414 24,34.828 41.414,17.414 38.586,14.586 	"/></g></svg>
+            </div>
+          </div>
+        <!-- Active -->
+        <!-- <div style="position: fixed; color: white; z-index: 10; top: 0; right: 0; background-color: black; opacity: 0.6; width: 100%; height: 100%;">
+            dgsgsg
+        </div> -->
+          <div class="search__items-box search__items-box--width">
+            <div class="search__item-feature">
+                <p>ظرفیت اقامتگاه</p>
+                <span>3 خوابه</span>
+             </div>
+             <div class="search__icon">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" ><path d="M0 0h48v48H0z" fill="none"/><g id="Shopicon"><polygon points="24,29.172 9.414,14.586 6.586,17.414 24,34.828 41.414,17.414 38.586,14.586 	"/></g></svg>
+              </div>
+          </div>
+          <div class="search__items-box search__items-box--width">
+            <div class="search__item-feature">
+              <p>نوع اقامتگاه</p>
+              <span>3 خوابه</span>
+            </div>
+            <div class="search__icon">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" ><path d="M0 0h48v48H0z" fill="none"/><g id="Shopicon"><polygon points="24,29.172 9.414,14.586 6.586,17.414 24,34.828 41.414,17.414 38.586,14.586 	"/></g></svg>
+              </div>
+          </div>
+          <div class="search__items-box">
+            <span>منطقه اقامتگاه</span>
+            <div class="search__icon">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" ><path d="M0 0h48v48H0z" fill="none"/><g id="Shopicon"><polygon points="24,29.172 9.414,14.586 6.586,17.414 24,34.828 41.414,17.414 38.586,14.586 	"/></g></svg>
+             </div>
+          </div>
+          <div class="search__items-button">
+           <button class="search__items-btn">فیلتر کردن</button>  
+          </div>
+        </div>
+       <!-- Search items -->
+      </div>
+     </section>
+     <!-- Top Section -->
+     <!-- Bottom Section -->
+     <section class="search__result">
+      <div class="search__result-wrapper">
+       <!-- Right box -->
+         <div class="search__result-right">
+           <h4>نتایج درخواستی شما</h4>
+           <p>تعداد نتایج یافت شده 32 اقامتگاه</p>
+
+           <div class="search__result-boxes">
+             <div class="result__box">
+              <div class="result__box-img"><img src="assets/img/Rectangle 4.png" alt=""></div>
+              <div class="result__box-content">
+                <div class="result__box-titles">
+                  <h4>آپارتمان مبله سه خوابه لوکس</h4>
+                  <p>میرزای شیرازی</p>
+                </div>
+                <!-- Result box features -->
+                <div class="result__box-features">
+                    <div class="feature__holder">
+                      <div class="feature__icon"><img src="assets/img/Ruler.svg" alt=""></div>
+                      <p class="feature__title">120 متر</p>
+                    </div>
+                    <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Buildings.svg" alt=""></div>
+                        <p class="feature__title">4 واحد</p>
+                    </div>
+                    <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Users Group Rounded.svg" alt=""></div>
+                        <p class="feature__title">تا 4 نفر</p>
+                   </div>
+                   <div class="feature__holder">
+                      <div class="feature__icon"><img src="assets/img/Bed.svg" alt=""></div>
+                      <p class="feature__title">3 خوابه</p>
+                   </div>
+                   <div class="feature__holder">
+                     <div class="feature__icon"><img src="assets/img/Bath.svg" alt=""></div>
+                     <p class="feature__title">2 سرویس</p>
+                  </div>
+                </div>
+                <!-- Result box features -->
+                <div class="result__box-prices">
+                    <span>2,400,000</span>
+                    <p>تومان برای یک شب</p>
+                </div>
+              </div>
+             </div>
+             <div class="result__box">
+                <div class="result__box-img"><img src="assets/img/Rectangle 4 (1).png" alt=""></div>
+                <div class="result__box-content">
+                  <div class="result__box-titles">
+                    <h4>آپارتمان مبله سه خوابه لوکس</h4>
+                    <p>میرزای شیرازی</p>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-features">
+                      <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Ruler.svg" alt=""></div>
+                        <p class="feature__title">120 متر</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Buildings.svg" alt=""></div>
+                          <p class="feature__title">4 واحد</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Users Group Rounded.svg" alt=""></div>
+                          <p class="feature__title">تا 4 نفر</p>
+                     </div>
+                     <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Bed.svg" alt=""></div>
+                        <p class="feature__title">3 خوابه</p>
+                     </div>
+                     <div class="feature__holder">
+                       <div class="feature__icon"><img src="assets/img/Bath.svg" alt=""></div>
+                       <p class="feature__title">2 سرویس</p>
+                    </div>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-prices">
+                      <span>2,400,000</span>
+                      <p>تومان برای یک شب</p>
+                  </div>
+                </div>
+             </div>
+             <div class="result__box">
+                <div class="result__box-img"><img src="assets/img/Rectangle 4 (2).png" alt=""></div>
+                <div class="result__box-content">
+                  <div class="result__box-titles">
+                    <h4>آپارتمان مبله سه خوابه لوکس</h4>
+                    <p>میرزای شیرازی</p>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-features">
+                      <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Ruler.svg" alt=""></div>
+                        <p class="feature__title">120 متر</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Buildings.svg" alt=""></div>
+                          <p class="feature__title">4 واحد</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Users Group Rounded.svg" alt=""></div>
+                          <p class="feature__title">تا 4 نفر</p>
+                     </div>
+                     <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Bed.svg" alt=""></div>
+                        <p class="feature__title">3 خوابه</p>
+                     </div>
+                     <div class="feature__holder">
+                       <div class="feature__icon"><img src="assets/img/Bath.svg" alt=""></div>
+                       <p class="feature__title">2 سرویس</p>
+                    </div>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-prices">
+                      <span>2,400,000</span>
+                      <p>تومان برای یک شب</p>
+                  </div>
+                </div>
+             </div>
+             <div class="result__box">
+                <div class="result__box-img"><img src="assets/img/Rectangle 4 (3).png" alt=""></div>
+                <div class="result__box-content">
+                  <div class="result__box-titles">
+                    <h4>آپارتمان مبله سه خوابه لوکس</h4>
+                    <p>میرزای شیرازی</p>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-features">
+                      <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Ruler.svg" alt=""></div>
+                        <p class="feature__title">120 متر</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Buildings.svg" alt=""></div>
+                          <p class="feature__title">4 واحد</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Users Group Rounded.svg" alt=""></div>
+                          <p class="feature__title">تا 4 نفر</p>
+                     </div>
+                     <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Bed.svg" alt=""></div>
+                        <p class="feature__title">3 خوابه</p>
+                     </div>
+                     <div class="feature__holder">
+                       <div class="feature__icon"><img src="assets/img/Bath.svg" alt=""></div>
+                       <p class="feature__title">2 سرویس</p>
+                    </div>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-prices">
+                      <span>2,400,000</span>
+                      <p>تومان برای یک شب</p>
+                  </div>
+                </div>
+             </div>
+             <div class="result__box">
+                <div class="result__box-img"><img src="assets/img/تصویر.png" alt=""></div>
+                <div class="result__box-content">
+                  <div class="result__box-titles">
+                    <h4>آپارتمان مبله سه خوابه لوکس</h4>
+                    <p>میرزای شیرازی</p>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-features">
+                      <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Ruler.svg" alt=""></div>
+                        <p class="feature__title">120 متر</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Buildings.svg" alt=""></div>
+                          <p class="feature__title">4 واحد</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Users Group Rounded.svg" alt=""></div>
+                          <p class="feature__title">تا 4 نفر</p>
+                     </div>
+                     <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Bed.svg" alt=""></div>
+                        <p class="feature__title">3 خوابه</p>
+                     </div>
+                     <div class="feature__holder">
+                       <div class="feature__icon"><img src="assets/img/Bath.svg" alt=""></div>
+                       <p class="feature__title">2 سرویس</p>
+                    </div>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-prices">
+                      <span>2,400,000</span>
+                      <p>تومان برای یک شب</p>
+                  </div>
+                </div>
+             </div>
+             <div class="result__box">
+                <div class="result__box-img"><img src="assets/img/Rectangle 4.png" alt=""></div>
+                <div class="result__box-content">
+                  <div class="result__box-titles">
+                    <h4>آپارتمان مبله سه خوابه لوکس</h4>
+                    <p>میرزای شیرازی</p>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-features">
+                      <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Ruler.svg" alt=""></div>
+                        <p class="feature__title">120 متر</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Buildings.svg" alt=""></div>
+                          <p class="feature__title">4 واحد</p>
+                      </div>
+                      <div class="feature__holder">
+                          <div class="feature__icon"><img src="assets/img/Users Group Rounded.svg" alt=""></div>
+                          <p class="feature__title">تا 4 نفر</p>
+                     </div>
+                     <div class="feature__holder">
+                        <div class="feature__icon"><img src="assets/img/Bed.svg" alt=""></div>
+                        <p class="feature__title">3 خوابه</p>
+                     </div>
+                     <div class="feature__holder">
+                       <div class="feature__icon"><img src="assets/img/Bath.svg" alt=""></div>
+                       <p class="feature__title">2 سرویس</p>
+                    </div>
+                  </div>
+                  <!-- Result box features -->
+                  <div class="result__box-prices">
+                      <span>2,400,000</span>
+                      <p>تومان برای یک شب</p>
+                  </div>
+                </div>
+             </div>
+           </div>
+
+           <div class="pagination">
+             <div class="pagination__wrapper">
+               <div class="prev__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
+                </svg>          
+               </div>
+               <div class="pagination__btn">42</div>
+               <div class="pagination__btn">...</div>
+               <div class="pagination__btn">6</div>
+               <div class="pagination__btn">5</div>
+               <div class="pagination__btn">4</div>
+               <div class="pagination__btn">3</div>
+               <div class="pagination__btn">2</div>
+               <div class="pagination__btn active">1</div>
+               <div class="next__btn">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
+                </svg>                
+               </div>
+             </div>
+           </div>
+
+           <div class="visit__more">
+            <button class="visit__btn">مشاهده بیشتر
+                <img src="assets/img/refresh-2.png" alt="">
+            </button>
+           </div>
+
+         </div>
+         <!-- Right box -->
+         <!-- Left box -->
+         <div class="search__result-left">
+          <div class="search__result-map">
+              <div id="map" style="width: 100%; height: 700px; border-radius: 10px; z-index: 1;"></div>
+          </div>
+      </div>
+       <!-- Left box -->
+      </div>
+     </section>
+     <!-- Bottom Section -->
+     <!-- Features -->
+     <section class="features__modal">
+      <div class="feature__modal-container">
+        <div class="feature__modal-header">
+          <p class="">امکانات اقامتگاه</p>
+          <div id="cancel-modal"><img src="assets/img/بستن.svg" alt="بستن"></div>
+        </div>
+        <div class="feature__modal-body">
+          <div class="modal__body-box">
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/TV.svg" alt=""></div>
+                <p>تلویزیون</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Tea Cup.svg" alt=""></div>
+                <p>نوشیدنی گرم</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Wi-Fi Router.svg" alt=""></div>
+                <p>اینترنت رایگان</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Condicioner 2.svg" alt=""></div>
+                <p>سرویس گرمایشی</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Condicioner.svg" alt=""></div>
+                <p>سرویس سرمایشی</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+          </div>
+          <div class="modal__body-box">
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Gamepad Minimalistic.svg" alt=""></div>
+                <p>کنسول بازی</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Remote Controller Minimalistic.svg" alt=""></div>
+                <p>خانه هوشممند</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Washing Machine Minimalistic.svg" alt=""></div>
+                <p>لباس شویی</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Gamepad Minimalistic.svg" alt=""></div>
+                <p>صندلی مهمان</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Sofa 2.svg" alt=""></div>
+                <p>مبلمان راحتی</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+          </div>
+          <div class="modal__body-box">
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Closet 2.svg" alt=""></div>
+                <p>کمد لباس</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Bath.svg" alt=""></div>
+                <p>سرویس حمام</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Bed.svg" alt=""></div>
+                <p>تخت خواب میمهان</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+            <div class="modal__box-holder">
+              <div class="modal__box-items">
+                <div><img src="assets/img/Treadmill Round.svg" alt=""></div>
+                <p>لوازم ورزشی</p>
+              </div>
+              <input class="checkbox" type="checkbox" name="" id="">
+            </div>
+          </div>
+        </div>
+        <div class="feature__modal-footer">
+          <button class="feature__cancel-modal">انصراف</button>
+          <button class="feature__confirm-modal">تایید تاریخ</button>
+        </div>
+      </div>
+     </section>
+     <!-- Features -->
+    </main>
+    <!-- Main section -->
+
+   <!-- Call about sec -->
+    <div class="call-about">
+    <div class="container-poshtiban">
+        <div>
+            <img src="assets/img/poshtibani-404.svg" alt="">
+        </div>
+        <p>جهت رزرو و اجاره آپارتمان مبله در شیراز میتوانید از طریق شماره تلفن زیر با ما تماس بگیرید و لحظات
+            خوشی را در
+            استان فارس زیبا سپری کنید.</p>
+        <span>۰۲۱۰۱۴<span style="color: #27686A;">۳۵۲۰</span></span>
+     </div>
+    </div>
+    <div class="video-end-page">
+      <img class="paly-video-footer" src="assets/img/پخش ویدیو.png" alt="">
+     <img src="assets/img/video-end-page.svg" alt="">
+   </div>
+  <!-- Call about sec -->
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+        <div class="top-footer-container">
+            <img src="assets/img/logo.svg" alt="">
+            <p>سابقه 20 سال در میزبانی و مهمان نوازی.</p>
+        </div>
+        <div class="call-info-footer">
+            <span>info@shirazmoble.com</span>
+            <span>۰۲۱۰۱۴۳۵۲۰</span>
+            <span>۰۹۰۱۴۵۶۲۹۲۸</span>
+        </div>
+        <div class="page-select-footer">
+            <a href="#">سوالات متداول</a>
+            <a href="#">قوانین و مقررات</a>
+            <a href="#">اقامتگاه ها</a>
+            <a href="#">درباره ما</a>
+            <a href="#">وبلاگ ما</a>
+            <a href="#">اقامتگاه ها روی نقشه</a>
+        </div>
+        <div class="Symbols-footer">
+            <img src="assets/img/symbol-footer (1).svg" alt="">
+            <img src="assets/img/symbol-footer (2).svg" alt="">
+            <img src="assets/img/symbol-footer (3).svg" alt="">
+            <img src="assets/img/symbol-footer (4).svg" alt="">
+            <img src="assets/img/symbol-footer (5).svg" alt="">
+        </div>
+        <div class="social-media-footer">
+            <img src="assets/img/Social Icons (1).svg" alt="">
+            <img src="assets/img/Social Icons (2).svg" alt="">
+            <img src="assets/img/Social Icons (3).svg" alt="">
+            <img src="assets/img/Social Icons (4).svg" alt="">
+            <img src="assets/img/Social Icons (5).svg" alt="">
+            <img src="assets/img/Social Icons.svg" alt="">
+        </div>
+        <h6>تمامی حقوق مادی و معنوی متعلق به شیراز مبله می باشد</h6>
+    </div>
+  </footer>
+  <!-- Footer -->
+
+  <!-- overlay -->
+  <section class="overlay"></section>
+  <section class="modal__overlay"></section>
+  <section class="date__overlay"></section>
+
+  <script>
+    // ایجاد نقشه Leaflet با زوم مناسب
+    var map = L.map('map').setView([29.619896, 52.533069], 17);
+
+    // لایه نقشه از OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // آیکون سفارشی
+    var customIcon = L.icon({
+        iconUrl: 'assets/img/icon-location.svg', // مسیر آیکون لوکال
+        iconSize: [40, 40],
+        iconAnchor: [20, 40],
+        popupAnchor: [0, -35]
+    });
+
+    // آرایه مختصات و نام مکان‌ها
+    var locations = [
+        { coords: [29.619896, 52.533069], name: "مکان ۱" },
+        { coords: [29.621500, 52.533600], name: "مکان ۲" },
+        { coords: [29.621900, 52.532500], name: "مکان ۳" },
+        { coords: [29.618000, 52.531200], name: "مکان ۴" },
+        { coords: [29.617700, 52.534000], name: "مکان ۵" },
+        { coords: [29.618500, 52.532700], name: "مکان ۶" },
+        { coords: [29.618980, 52.532000], name: "مکان 7" },
+        { coords: [29.617280, 52.531700], name: "مکان 8" },
+        { coords: [29.619896, 52.531069], name: "مکان 9" },
+        { coords: [29.619806, 52.532069], name: "مکان 10" },
+        { coords: [29.621199, 52.532000], name: "مکان 11" },
+        { coords: [29.621900, 52.535000], name: "مکان 12" },
+        { coords: [29.620600, 52.534000], name: "مکان 12" }
+
+    ];
+
+    // اضافه کردن مارکرها همراه با پاپ‌آپ روی نقشه
+    locations.forEach(location => {
+        L.marker(location.coords, { icon: customIcon }).addTo(map)
+            .bindPopup(location.name); // نمایش نام مکان در پاپ‌آپ
+    });
+
+</script>
+
+ <script src="assets/js/header.js"></script>
+ <script src="assets/js/searchres.js"></script>
+</body>
+</html>
