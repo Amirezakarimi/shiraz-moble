@@ -13,6 +13,12 @@ body {
   direction: rtl;
   font-family: "Modam";
 }
+
+.no-drag-img {
+  pointer-events: none;    /* جلوگیری از کلیک و انتخاب */
+  -webkit-user-drag: none;
+}
+
 .overlay,
 .modal__overlay {
   position: fixed;
@@ -62,9 +68,11 @@ body {
   font-family: "Modam";
   font-weight: 300;
   font-size: 15px;
+  cursor: pointer;
 }
 .header__li:hover {
   color: #27686a;
+  border-bottom: 2px solid #27686a;
 }
 .header__li--active,
 .mobile__li--active {
