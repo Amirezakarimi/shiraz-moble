@@ -29,6 +29,17 @@ body {
   z-index: 1;
 }
 
+.swiper-slide a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.swiper-slide a {
+  position: relative;
+  display: block;
+}
+
 .top-div-page {
   position: relative;
   margin-bottom: 50px;
