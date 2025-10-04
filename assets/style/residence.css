@@ -6,6 +6,25 @@ body {
     margin-right: auto;
     overflow-x: hidden;
   }
+
+/* Overlay */
+.all__overlay {
+  position: fixed;
+  width: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease-in-out;
+  height: 100%;
+  background-color: black;
+  opacity: 0.4;
+}
+.all__overlay.overlay--active {
+  width: 100%;
+  z-index: 16;
+}
 .main{
     margin-bottom: 50px;
 }

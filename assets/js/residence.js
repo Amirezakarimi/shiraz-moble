@@ -32,6 +32,11 @@ cancelGalleryIcon.addEventListener("click", () => {
   allOverlay.classList.remove("overlay--active");  
 });
 
+allOverlay.addEventListener("click", () => {
+  galleryModal.classList.remove("gallery__modal--active");
+  allOverlay.classList.remove("overlay--active");
+});
+
 const images = document.querySelectorAll('.galley__img');
 let currentIndex = 0;
 
