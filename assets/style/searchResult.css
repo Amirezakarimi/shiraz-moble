@@ -32,8 +32,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    top: 50px;
+    position: fixed;
+    top: 0;
     left: 0;
     transition: all 0.3s ease-in-out;
     right: 0;
@@ -719,7 +719,7 @@ body {
          top: 520px;
      }
      .date__modal{
-        top: 300px;
+        top: 0;
      }
      .date__modal-container{
         width: 80%;

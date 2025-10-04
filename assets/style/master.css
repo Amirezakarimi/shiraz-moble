@@ -12,10 +12,10 @@
 body {
   direction: rtl;
   font-family: "Modam";
-<<<<<<< HEAD
 }
 .overlay,
-.modal__overlay {
+.modal__overlay,
+.date__overlay {
   position: fixed;
   width: 0;
   top: 0;
@@ -31,7 +31,8 @@ body {
 .overlay--active {
   width: 100%;
 }
-.overlay.overlay--active {
+.overlay.overlay--active,
+.date__overlay.overlay--active {
   z-index: 16;
 }
 /* Header */

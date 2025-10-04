@@ -45,3 +45,8 @@ modalOverlay.addEventListener("click", () => {
   featuresModal.classList.remove("features__modal--active");
   modalOverlay.classList.remove("overlay--active");
 });
+
+dateOverlay.addEventListener("click", () => {
+  dateModal.classList.remove("date__modal--active");
+  dateOverlay.classList.remove("overlay--active");
+});
