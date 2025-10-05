@@ -121,7 +121,7 @@ body {
 .header__mobile {
   position: fixed;
   top: 0;
-  right: -20rem;
+  right: -100%;
   display: none;
   width: 250px;
   transition: all 0.3s ease-in-out;

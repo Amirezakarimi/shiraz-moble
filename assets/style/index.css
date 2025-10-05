@@ -367,15 +367,12 @@ body {
 }
 
 .div-location-map {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
+  display: block;
   margin-top: 30px;
+  overflow: hidden;
 }
 
-.div-location-map > div {
-  width: calc(25% - 15px);
-}
+/* Let Swiper manage slide widths; avoid forcing widths on wrapper */
 
 .img-location-map {
   background-color: #f6f6f0;
@@ -633,6 +630,10 @@ body {
   }
 
   .top-div-products-home-page {
+    flex-direction: column;
+  }
+
+  .bottom-div-products-home-page {
     flex-direction: column;
   }
 
